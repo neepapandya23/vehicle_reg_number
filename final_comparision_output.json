@@ -1,8 +1,10 @@
-
-
-Extracted vehicle registration number list from given input file_car_input.txt: 
- ['AD58VNF', 'BW57BOW', 'KT17DLX', 'SG18HTN']
-
+Extracted vehicle registration number list from given input file_car_input.txt:
+[
+    "AD58VNF",
+    "BW57BOW",
+    "KT17DLX",
+    "SG18HTN"
+],
 Invalid Vehicle Registration Number List from Website:
 [
     "BW57BOW",
@@ -15,10 +17,10 @@ Valid Vehicle Registration Number List from Website:
 ]
 
 input_dictionary : Generated from website, those numbers extracted from given input file and fed to website:
-input_dictionary: Generated from given car_output.txt file:
+output_dictionary: Generated from given car_output.txt file:
 Detail comparision between both above dictionaries :
 input_dictionary keys  : {'AD58VNF', 'KT17DLX'}
-output_dictionary keys  {'AD58VNF', 'KT17DLX', 'BW57BOF', 'SG18HTN'}
+output_dictionary keys  {'SG18HTN', 'AD58VNF', 'BW57BOF', 'KT17DLX'}
 Shared keys between both dictionaries: {'AD58VNF', 'KT17DLX'}
 mismatched keys and values from shared keys:
 {
@@ -60,7 +62,7 @@ mismatched keys and values from shared keys:
     ]
 },
 Uncommon keys between both dictionaries: set()
-Different keys between both dictionaries: {'BW57BOF', 'SG18HTN'}
+Different keys between both dictionaries: {'SG18HTN', 'BW57BOF'}
 
 mismatched keys and values from shared keys dictionaries:
 {

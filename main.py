@@ -44,7 +44,7 @@ class WebUi:
         self.driver.delete_all_cookies()
 
     def perform_task(self):
-        """Load the main web page."""
+        """Load the main web page and perform operations."""
         try:
             input_file = r"C:\Users\parth\Documents\Neepa-Identity E2E\Car\car_input V4.txt"
             output_file = r"C:\Users\parth\Documents\Neepa-Identity E2E\Car\car_output V4.txt"
@@ -65,7 +65,7 @@ class WebUi:
             print("STEP 6: Compare two dictionaries and store output in json file.")
             self.dict_compare(input_dictionary,output_dictionary)
         except Exception as exc:
-            print("Error while loading web page.")
+            print("Error while performing tasks.")
             raise exc
 
     @staticmethod
@@ -103,7 +103,6 @@ class WebUi:
         #convert_text_to_list
         with open("find_vehicle.txt") as f:
             lines = [line.rstrip("\n").replace(" ", "") for line in f]
-            # print(lines)
             return lines
 
     @staticmethod
@@ -188,7 +187,7 @@ class WebUi:
         with open("final_comparision_output.json", "a") as outfile:
             print("", file=outfile)
             print("input_dictionary : Generated from website, those numbers extracted from given input file and fed to website:", file=outfile)
-            print("input_dictionary: Generated from given car_output.txt file:", file=outfile)
+            print("output_dictionary: Generated from given car_output.txt file:", file=outfile)
             message = "Detail comparision between both above dictionaries :"
             print(message, file=outfile)
             d1_keys = set(d1.keys())
@@ -208,7 +207,7 @@ class WebUi:
             different = d2_keys - d1_keys
             print("Different keys between both dictionaries:", different, file=outfile)
             print("key_value_comparision_output:", data)
-        values = {o: self.finding_values_from_dict(d1[o], d2[o]) for o in shared_keys}
+        values = {o: self.finding_values_from_dict(d1[o], d2[o]) for o in shared_keys if d1[o] != d2[o]}
         print("mismatched keys and values from shared keys:", values)
 
     @staticmethod
@@ -230,7 +229,6 @@ class WebUi:
         do detail search and find out valid and invalid vehicle registration number."""
         invalid_number_list = []
         valid_number_list =[]
-        # l = 0
         with open("final_comparision_output.json", "a") as outfile:
             for vehicle_number in vehicle_number_list:
                 print("-----------------Enter Vehicle Reg Number: " + vehicle_number + "---------------")
@@ -258,11 +256,12 @@ class WebUi:
                     invalid_vehicle_number_details = error_div.text
                     msg = vehicle_number + " is invalid : \n"
                     print(msg, invalid_vehicle_number_details)
-                    print("", file=outfile)
                     invalid_number_list.append(vehicle_number)
                     vehi.clear()
-            print("Extracted vehicle registration number list from given input file_car_input.txt: \n", vehicle_number_list ,
-                  file=outfile)
+            print("Extracted vehicle registration number list from given input file_car_input.txt:", file=outfile)
+            vehicle_list= json.dumps(vehicle_number_list, indent=4)
+            outfile.write(vehicle_list)
+            outfile.write(",")
             print("", file=outfile)
             print("Invalid Vehicle Registration Number List from Website:", file=outfile)
             data = json.dumps(invalid_number_list, indent=4)
@@ -305,9 +304,3 @@ class WebUi:
 if __name__ == "__main__":
     web_page = WebUi()
     web_page.perform_task()
-
-
-
-
-
-
