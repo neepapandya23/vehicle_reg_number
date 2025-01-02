@@ -1,0 +1,26 @@
+{
+    "SG18HTN": {
+        "VARIENT_REG": "SG18HTN",
+        "MAKE": "Volkswagen",
+        "MODEL": " Golf 1.5 TSI EVO SE Nav SG18 HTN",
+        "YEAR": "2018"
+    },
+    "AD58VNF": {
+        "VARIENT_REG": "AD58VNF",
+        "MAKE": "BMW",
+        "MODEL": "1 SERIES DIESEL COUPE - 120d M Sport 2dr",
+        "YEAR": "2008"
+    },
+    "BW57BOF": {
+        "VARIENT_REG": "BW57BOF",
+        "MAKE": "TOYOTA",
+        "MODEL": "YARIS HATCHBACK - 1.0 VVT-i T2 3dr",
+        "YEAR": "2008"
+    },
+    "KT17DLX": {
+        "VARIENT_REG": "KT17DLX",
+        "MAKE": "SKODA",
+        "MODEL": "SUPERB DIESEL ESTATE - 2.0 TDI CR 190 Sport Line 5dr DSG",
+        "YEAR": "2017"
+    }
+}

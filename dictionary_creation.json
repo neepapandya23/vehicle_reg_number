@@ -1,0 +1,22 @@
+{
+    "AD58VNF": {
+        "MODEL": "1 SERIES 120D M SPORT",
+        "BODY STYLE": "2 Door Coupe",
+        "YEAR": "2008",
+        "TRANSMISSION": "Manual",
+        "FUEL TYPE": "Diesel",
+        "ENGINE SIZE": "1995",
+        "MAKE": "BMW",
+        "VARIENT_REG": "AD58VNF"
+    },
+    "KT17DLX": {
+        "MODEL": "SUPERB SPORTLINE",
+        "BODY STYLE": "5 Door Estate",
+        "YEAR": "2017",
+        "TRANSMISSION": "Automatic",
+        "FUEL TYPE": "Diesel",
+        "ENGINE SIZE": "1968",
+        "MAKE": "SKODA",
+        "VARIENT_REG": "KT17DLX"
+    }
+}

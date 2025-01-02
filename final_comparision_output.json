@@ -1,0 +1,94 @@
+
+
+Extracted vehicle registration number list from given input file_car_input.txt: 
+ ['AD58VNF', 'BW57BOW', 'KT17DLX', 'SG18HTN']
+
+Invalid Vehicle Registration Number List from Website:
+[
+    "BW57BOW",
+    "SG18HTN"
+],
+Valid Vehicle Registration Number List from Website:
+[
+    "AD58VNF",
+    "KT17DLX"
+]
+
+input_dictionary : Generated from website, those numbers extracted from given input file and fed to website:
+input_dictionary: Generated from given car_output.txt file:
+Detail comparision between both above dictionaries :
+input_dictionary keys  : {'AD58VNF', 'KT17DLX'}
+output_dictionary keys  {'AD58VNF', 'KT17DLX', 'BW57BOF', 'SG18HTN'}
+Shared keys between both dictionaries: {'AD58VNF', 'KT17DLX'}
+mismatched keys and values from shared keys:
+{
+    "AD58VNF": [
+        {
+            "MODEL": "1 SERIES 120D M SPORT",
+            "BODY STYLE": "2 Door Coupe",
+            "YEAR": "2008",
+            "TRANSMISSION": "Manual",
+            "FUEL TYPE": "Diesel",
+            "ENGINE SIZE": "1995",
+            "MAKE": "BMW",
+            "VARIENT_REG": "AD58VNF"
+        },
+        {
+            "VARIENT_REG": "AD58VNF",
+            "MAKE": "BMW",
+            "MODEL": "1 SERIES DIESEL COUPE - 120d M Sport 2dr",
+            "YEAR": "2008"
+        }
+    ],
+    "KT17DLX": [
+        {
+            "MODEL": "SUPERB SPORTLINE",
+            "BODY STYLE": "5 Door Estate",
+            "YEAR": "2017",
+            "TRANSMISSION": "Automatic",
+            "FUEL TYPE": "Diesel",
+            "ENGINE SIZE": "1968",
+            "MAKE": "SKODA",
+            "VARIENT_REG": "KT17DLX"
+        },
+        {
+            "VARIENT_REG": "KT17DLX",
+            "MAKE": "SKODA",
+            "MODEL": "SUPERB DIESEL ESTATE - 2.0 TDI CR 190 Sport Line 5dr DSG",
+            "YEAR": "2017"
+        }
+    ]
+},
+Uncommon keys between both dictionaries: set()
+Different keys between both dictionaries: {'BW57BOF', 'SG18HTN'}
+
+mismatched keys and values from shared keys dictionaries:
+{
+    "dictionary_item_removed": [
+        "root['BODY STYLE']",
+        "root['TRANSMISSION']",
+        "root['FUEL TYPE']",
+        "root['ENGINE SIZE']"
+    ],
+    "values_changed": {
+        "root['MODEL']": {
+            "new_value": "1 SERIES DIESEL COUPE - 120d M Sport 2dr",
+            "old_value": "1 SERIES 120D M SPORT"
+        }
+    }
+},
+mismatched keys and values from shared keys dictionaries:
+{
+    "dictionary_item_removed": [
+        "root['BODY STYLE']",
+        "root['TRANSMISSION']",
+        "root['FUEL TYPE']",
+        "root['ENGINE SIZE']"
+    ],
+    "values_changed": {
+        "root['MODEL']": {
+            "new_value": "SUPERB DIESEL ESTATE - 2.0 TDI CR 190 Sport Line 5dr DSG",
+            "old_value": "SUPERB SPORTLINE"
+        }
+    }
+},
