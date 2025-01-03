@@ -46,13 +46,11 @@ class WebUi:
     def perform_task(self):
         """Load the main web page and perform operations."""
         try:
-            input_file = r"C:\Users\parth\Documents\Neepa-Identity E2E\Car\car_input V4.txt"
-            output_file = r"C:\Users\parth\Documents\Neepa-Identity E2E\Car\car_output V4.txt"
             print("STEP 1: Enter into car valuation website :https://www.confused.com")
             self.enter_into_website()
             print(
                 "STEP 2: Extract vehicle registration number from given input file:car_input.txt and store into find_vehicle.txt.")
-            vehicle_number_list =self.find_vehicle_reg_number(input_file)
+            vehicle_number_list =self.find_vehicle_reg_number()
             print(vehicle_number_list)
             print("STEP 3: Feed vehicle registration number to confused.com website and do detail search.")
             self.feed_number_do_detail_search(vehicle_number_list)
@@ -60,7 +58,7 @@ class WebUi:
             input_dictionary= self.dictionary_creation()
             print("----------Input_dictionary created in dictionary_creation.json file.--------")
             print("STEP 5: Create dictionary and store in :car_result.json. from given output file:car_output.txt")
-            output_dictionary =self.car_output(output_file)
+            output_dictionary =self.car_output()
             print("----------Output_dictionary created in car_result.json file.--------")
             print("STEP 6: Compare two dictionaries and store output in json file.")
             self.dict_compare(input_dictionary,output_dictionary)
@@ -90,11 +88,11 @@ class WebUi:
         return driver
 
     @staticmethod
-    def find_vehicle_reg_number(input_file):
+    def find_vehicle_reg_number():
         """Extract vehicle registration number from given input file:car_input.txt and store into find_vehicle.txt."""
         regex = r"([a-zA-Z]{1,3})(\d+)[^\S\n\t]*([a-zA-Z]{1,3})"
         reg = re.compile(regex)
-        for i, line in enumerate(open(input_file)):
+        for i, line in enumerate(open("car_input V4.txt")):
             for match in re.finditer(reg, line):
                 i + 1
                 list = match.group()
@@ -106,13 +104,13 @@ class WebUi:
             return lines
 
     @staticmethod
-    def car_output(output_file):
+    def car_output():
         """ Create dictionary and store in :car_result.json. from given output file:car_output.txt"""
         # resultant dict
         dict1 = {}
         # fields in the sample file
         fields = ['VARIENT_REG', 'MAKE', 'MODEL', 'YEAR']
-        with open(output_file) as fh:
+        with open("car_output V4.txt") as fh:
             l = 0
             for line in fh:
                 # reading line by line from the text file
