@@ -1,0 +1,120 @@
+Extracted vehicle registration number list from given input file_car_input.txt:
+[
+    "AD58VNF",
+    "BW57BOW",
+    "KT17DLX",
+    "SG18HTN"
+],
+Invalid Vehicle Registration Number List from Website:
+[
+    "BW57BOW",
+    "SG18HTN"
+],
+Valid Vehicle Registration Number List from Website:
+[
+    "AD58VNF",
+    "KT17DLX"
+]
+
+input_dictionary keys :Generated from website: {'MAKE', 'VARIENT_REG', 'BODY STYLE', 'YEAR', 'MODEL', 'TRANSMISSION', 'ENGINE SIZE', 'FUEL TYPE'}
+output_dictionary keys :Generated from given car_output.txt file: {'VARIENT_REG', 'MAKE', 'YEAR', 'MODEL'}
+Shared keys between both dictionaries: {'VARIENT_REG', 'MODEL', 'MAKE', 'YEAR'}
+mismatched keys and values from shared keys dictionaries:
+{
+    "MODEL": [
+        "SUPERB SPORTLINE",
+        "SUPERB DIESEL ESTATE - 2.0 TDI CR 190 Sport Line 5dr DSG"
+    ]
+},
+matched keys and values from shared keys dictionaries:
+{
+    "VARIENT_REG": [
+        "KT17DLX",
+        "KT17DLX"
+    ],
+    "MAKE": [
+        "SKODA",
+        "SKODA"
+    ],
+    "YEAR": [
+        "2017",
+        "2017"
+    ]
+},
+Uncommon keys between both dictionaries: {'BODY STYLE', 'FUEL TYPE', 'ENGINE SIZE', 'TRANSMISSION'}
+Different keys between both dictionaries: set()
+
+input_dictionary keys :Generated from website: {'MAKE', 'VARIENT_REG', 'BODY STYLE', 'YEAR', 'MODEL', 'TRANSMISSION', 'ENGINE SIZE', 'FUEL TYPE'}
+output_dictionary keys :Generated from given car_output.txt file: {'VARIENT_REG', 'MAKE', 'YEAR', 'MODEL'}
+Shared keys between both dictionaries: {'VARIENT_REG', 'MODEL', 'MAKE', 'YEAR'}
+mismatched keys and values from shared keys dictionaries:
+{
+    "MODEL": [
+        "1 SERIES 120D M SPORT",
+        "1 SERIES DIESEL COUPE - 120d M Sport 2dr"
+    ]
+},
+matched keys and values from shared keys dictionaries:
+{
+    "VARIENT_REG": [
+        "AD58VNF",
+        "AD58VNF"
+    ],
+    "MAKE": [
+        "BMW",
+        "BMW"
+    ],
+    "YEAR": [
+        "2008",
+        "2008"
+    ]
+},
+Uncommon keys between both dictionaries: {'BODY STYLE', 'FUEL TYPE', 'ENGINE SIZE', 'TRANSMISSION'}
+Different keys between both dictionaries: set()
+
+input_dictionary keys :Generated from website: {'KT17DLX', 'AD58VNF'}
+output_dictionary keys :Generated from given car_output.txt file: {'SG18HTN', 'BW57BOF', 'KT17DLX', 'AD58VNF'}
+Shared keys between both dictionaries: {'KT17DLX', 'AD58VNF'}
+mismatched keys and values from shared keys dictionaries:
+{
+    "KT17DLX": [
+        {
+            "MODEL": "SUPERB SPORTLINE",
+            "BODY STYLE": "5 Door Estate",
+            "YEAR": "2017",
+            "TRANSMISSION": "Automatic",
+            "FUEL TYPE": "Diesel",
+            "ENGINE SIZE": "1968",
+            "MAKE": "SKODA",
+            "VARIENT_REG": "KT17DLX"
+        },
+        {
+            "VARIENT_REG": "KT17DLX",
+            "MAKE": "SKODA",
+            "MODEL": "SUPERB DIESEL ESTATE - 2.0 TDI CR 190 Sport Line 5dr DSG",
+            "YEAR": "2017"
+        }
+    ],
+    "AD58VNF": [
+        {
+            "MODEL": "1 SERIES 120D M SPORT",
+            "BODY STYLE": "2 Door Coupe",
+            "YEAR": "2008",
+            "TRANSMISSION": "Manual",
+            "FUEL TYPE": "Diesel",
+            "ENGINE SIZE": "1995",
+            "MAKE": "BMW",
+            "VARIENT_REG": "AD58VNF"
+        },
+        {
+            "VARIENT_REG": "AD58VNF",
+            "MAKE": "BMW",
+            "MODEL": "1 SERIES DIESEL COUPE - 120d M Sport 2dr",
+            "YEAR": "2008"
+        }
+    ]
+},
+matched keys and values from shared keys dictionaries:
+{},
+Uncommon keys between both dictionaries: set()
+Different keys between both dictionaries: {'SG18HTN', 'BW57BOF'}
