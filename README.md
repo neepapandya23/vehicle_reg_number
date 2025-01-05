@@ -14,7 +14,7 @@ Step3: Detail search for vehicle, generate dictionary and store output as dictio
 
 Step4: From given output file:"car_output.txt", create another dictionary and store in :"car_result.json"file.
 
-Step5: Compare two below mention dictionaries and result stored in " final_comparision_output.json" file.
+Step5: Compare two below mention dictionaries and result stored in " final_comparision_output.json" and "final_comparision_output.txt" files.
 
 1. The output returned by the car valuation website: input_dictionary :"dictionary_creation.json" file.
 2.  With given car_output.txt: output_dictionary :"car_result.json" file.
@@ -30,9 +30,7 @@ Driver code: "main.py" is driver file where all library functions are mentioned 
 Output Files: Result
 1. Input Dictionary: Generated dictionary from https://www.confused.com/ and store output as dictionary in "dictionary_creation.json" file.
 2. Output Dictionary: Generated  dictionary "car_result.json" file from given output file:"car_output.txt".
-3. Comparision between above both Dictionaries: " final_comparision_output.json" file.
-
-
+3. Comparision between above both Dictionaries: " final_comparision_output.json" and " final_comparision_output.txt" files.
 
 
        
