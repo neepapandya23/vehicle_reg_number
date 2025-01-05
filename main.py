@@ -18,8 +18,6 @@ Step5: Compare two following dictionaries and result stored in " final_comparisi
 """
 import re
 import os
-from fileinput import filename
-
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.common.by import By
@@ -27,7 +25,6 @@ from selenium.webdriver.chrome.options import Options
 from webdriver_manager.chrome import ChromeDriverManager
 import time
 import json
-import ast
 from deepdiff import DeepDiff
 from collections.abc import Mapping
 
