@@ -3,7 +3,9 @@ Title: Write a test automation suite that does the following:
 2. Fed that number to car valuation website and do detail car search.
 2. Compare the output returned by the car valuation website with given car_output.txt
 
-Description: this script will enter into car valuation website:https://www.confused.com, fed number to car valuation
+Aim: Covert both input and output sources into dictionary(key : value) format so comparision between both dictionaries can made into key : value format.
+
+Description: This script will enter into car valuation website:https://www.confused.com, fed number to car valuation
 website which is extracted from given input file and do comparison with given output file.
 
 Step1: Extract vehicle registration number from given input file:"car_input.txt" and store into "find_vehicle.txt".
@@ -31,6 +33,13 @@ Output Files: Result
 1. Input Dictionary: Generated dictionary from https://www.confused.com/ and store output as dictionary in "dictionary_creation.json" file.
 2. Output Dictionary: Generated  dictionary "car_result.json" file from given output file:"car_output.txt".
 3. Comparision between above both Dictionaries: " final_comparision_output.json" and " final_comparision_output.txt" files.
+
+Below mentioned modules/packages need to install before running this code:
+os
+selenium
+webdriver_manager.chrome
+deepdiff
+collections.abc
 
 
        
